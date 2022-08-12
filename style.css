@@ -1,7 +1,5 @@
 body{
-  background-color: ;
   margin: 0;
-  margin-top: 100px;
 }
 header{
   position: fixed;
@@ -11,16 +9,8 @@ header{
   top: 0;
   left: 0;
   background-color: black;
+  z-index: 1;
 }
-/* #header-logo{
-  padding: 0;
-  margin: 0 20px;
-  display: flex;
-  justify-content: center;
-}
-#header-logo > img{
-  width: 5%;
-} */
 h1{
   position: relative;
   display: flex;
@@ -38,7 +28,6 @@ h1:before, h1:after {
   width: 150px;
   height: 2px;
   border-top: solid 1px black;
-  /* border-bottom: solid 1px black; */
 }
 h1:before {
   left:0;
@@ -49,123 +38,376 @@ h1:after {
 header{
   display: flex;
   justify-content: right;
-  /* margin: 20px; */
 }
-header > nav > a{
-  margin: 10px;
-  font-size: 15px;
-  text-decoration: none;
+img:not([alt]) {
+  border: 10px solid red;
+}
+.more{
+  display: inline;
+  margin: 50px 0px 0px 0px;
+  padding: 5px 10px;
+  border-radius: 5%;
+  color: #fafaff;
+  background-color: lightgrey;
+}
+.more > a{
   color: #fafaff;
 }
-header > nav > a:hover{
-  opacity: 0.5;
-
+.more > a:link{
+  text-decoration: none;
 }
-article > div{
+.more > a:hover{
+  color: #333333;
+}
+.hobby-text{
   display: flex;
-  justify-content: center;
-  margin: 20px;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 30px 0;
 }
-article > div > img{
-  border-radius: 1%;
-  width: 100%;
-}
-section{
-  margin: 20px;
-  display: flex;
-  justify-content: center;
-}
-#mypict{
-  display: flex;
-  justify-content: right;
-  /* text-align: right; */
-}
-#mypict > img{
-  margin-right: 20px;
-  justify-content: center;
-  border-radius: 50%;
-  width: 50%;
-}
-#about{
-  display: flex;
-}
-#about > div{
-  margin: 0;
-}
-#about > div > p{
-  font-size: 25px;
-  margin: 0;
-}
-#about > ul{
-  display: block;
-  justify-content: left;
-}
-section{
-  display: block;
-  margin: 20px;
-}
-.hobby-div{
-  display: flex;
-  justify-content: center;
-  margin: 20px 30px;
-}
-.hobby-div > p{
-  margin: 50px 30px;
-}
-.hobby-div > img{
-  border-radius: 5%;
-  margin: 20px 10px;
-  width: 40%;
-}
-table{
-  border-collapse: separate;
-  border: 0;
-  /* border-spacing: 3px; */
-  width: 100%;
-}
-
-table th,table td{
-  border-radius: 2px;
-  text-align: center;
-  padding: 5px 0;
-}
-table th{
+#page-top {    
+  position: fixed;
+  bottom: 38px;
+  right: 20px;
   background-color: black;
   color: white;
-  border: none;
-  /* border:solid 1px darkgray; */
+  text-align: center;
+  text-decoration: none;
+  padding: 28px 24px;  
+  border-radius: 50%;
+  font-family: "Noto Sans JP", sans-serif;
+  display: none;
+}
+section{
+  opacity: 0;
+  transition: 1s;
+}
+.fade-in{
+  opacity: 1;
+}
+.modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+.big-img{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 80%;
+  max-width: 800px;
+  margin: auto;
+}
+.close-btn{
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: white;
+  font-size: 40px;
+  text-decoration: none;
+}
+@media screen  and (min-width: 768px) {
+  body{
+    margin-top: 100px;
+  }
+  .more{
+    /* vertical-align: middle; */
+    /* width: 50px; */
+    /* height: 30px; */
+  }
+  header > nav > a{
+    margin: 10px 30px;
+    font-size: 15px;
+    text-decoration: none;
+    color: #fafaff;
+  }
+  header > nav > a:hover{
+    opacity: 0.5;
+  }
+  article > div{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+  }
+  article > div > img{
+    border-radius: 1%;
+    width: 100%;
+  }
+  section{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  #mypict{
+    display: flex;
+    justify-content: right;
+    /* text-align: right; */
+  }
+  #mypict > img{
+    margin-right: 20px;
+    justify-content: center;
+    border-radius: 50%;
+    width: 50%;
+  }
+  #about-section{
+    display: flex;
+  }
+  #about-section > div{
+    margin: 0;
+  }
+  #about-section > div > p{
+    font-size: 25px;
+    margin: 0;
+  }
+  #about-section > ul{
+    display: block;
+    justify-content: left;
+  }
+  section{
+    display: block;
+    margin: 20px;
+  }
+  .hobby-div{
+    display: flex;
+    justify-content: center;
+    margin: 20px 30px;
+  }
+  .hobby-div > img{
+    border-radius: 5%;
+    margin: 20px 10px;
+    width: 40%;
+  }
+  .hobby-text > p{
+    margin: 30px 30px 80px 10px;
+  }
+  #hobby-section > div:nth-child(even) > p{
+    order: 1;
+  }
+  #hobby-section > div:nth-child(even) > img{
+    order: 2;
+  }
+  table{
+    border-collapse: separate;
+    border: 0;
+    /* border-spacing: 3px; */
+    width: 100%;
+  }
+
+  table th,table td{
+    border-radius: 2px;
+    text-align: center;
+    padding: 5px 0;
+  }
+  table th{
+    background-color: black;
+    color: white;
+    border: none;
+    /* border:solid 1px darkgray; */
+  }
+  table td{
+    background-color: #333333;
+    border:solid 1px white;
+    color: lightgray;
+  }
+  .works-contents{
+    margin: 80px;
+  }
+  .works-contents > img{
+    border-radius: 2%;
+    width: 100%;
+  }
+  footer{
+    display: flex;
+    padding: 20px 0;
+    margin: 0;
+    width: 100%;
+    background-color: black;
+  }
+  #sns-footer{  
+    display: flex;
+  }
+  #sns-footer > a{
+    width: 5%;
+    display: flex;
+    justify-content: center;
+  }
+  #sns-footer > a > img:first-child{
+    margin-left: 20px;
+  }
+  #sns-footer > a > img{
+    margin: auto 20px;
+    border-radius: 50%;
+    border: #fafaff solid 2px;
+    width: 50%;
+    height: 30%;
+  }
+  #sns-footer > p{
+    display: block;
+    margin-left: 300px;
+  }
+  #sns-footer > p > span{
+    display: flex;
+    text-align: right;
+    width: 100%;
+    color: #fafaff;
+  }
 }
 
-table td{
-  background-color: #333333;
-  border:solid 1px white;
-  color: lightgray;
-}
-.works-contents{
-  margin: 80px;
-}
-.works-contents > img{
-  border-radius: 2%;
-  width: 100%;
-}
-footer{
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  width: 100%;
-  background-color: black;
-  padding: 20px 0;
-}
-#sns-footer{
-  display: flex;
-  padding: 20px;
-  /* justify-content: center; */
-}
-#sns-footer > a > img{
-  width: 100%;
-}
-#sns-footer > div > span{
-  display: flex;
-  margin: 0 100px;
-  color: #fafaff;
+@media screen and (max-width: 767px) {
+  body{
+    margin-top: 80px;
+    font-family: "Book Antiqua", "Yu Mincho";
+  }
+  h1{
+    font-style: italic;
+    font-size: 55px;
+    /* text-decoration: underline grey; */
+    margin-top: 100px;
+    margin-bottom: 70px;
+  }
+  header > nav > a{
+    margin: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #fafaff;
+  }
+  header > nav > a:hover{
+    opacity: 0.5;
+  }
+  article > div{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+  article > div > img{
+    width: 100%;
+  }
+  section{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  #mypict{
+    display: flex;
+    justify-content: right;
+    width: 40%;
+  }
+  #mypict > img{
+    margin-right: 20px;
+    justify-content: center;
+    border-radius: 50%;
+    width: 90%;
+  }
+  #about-section{
+    display: flex;
+  }
+  #about-section > div{
+    margin: 0;
+  }
+  #about-section > div > p{
+    font-size: 35px;
+    margin: 0;
+    margin-top: 20px;
+  }
+  #about-section > ul{
+    display: block;
+    justify-content: left;
+  }
+  section{
+    display: block;
+    margin: 20px 0;
+  }
+  #hobby-section{
+    display: block;
+  }
+  .hobby-div{
+    display: block;
+    justify-content: center;
+    margin: 0;
+  }
+  .hobby-div > img{
+    display: block;
+    /* border-radius: 5%; */
+    margin: 0;
+    width: 100%;
+    order: 1;
+  }
+  .hobby-div > p{
+    display: block;
+    margin: 10px 20px 100px;
+    order: 2;
+  }
+  /* table{
+    border-collapse: separate;
+    border: 0;
+    width: 100%;
+  }
+  table th,table td{
+    border-radius: 2px;
+    text-align: center;
+    padding: 5px 0;
+  }
+  table th{
+    background-color: black;
+    color: white;
+    border: none;
+  }
+  table td{
+    background-color: #333333;
+    border:solid 1px white;
+    color: lightgray;
+  } */
+  .works-contents{
+    margin: 50px 0;
+  }
+  .works-text{
+    margin: 0 0 100px 10px;
+  }
+  .works-text > p{
+    /* margin-bottom: 1000px; */
+  }
+  .works-contents > img{
+    width: 100%;
+  }
+  footer{
+    display: flex;
+    padding: 20px 0;
+    margin: 0;
+    width: 100%;
+    background-color: black;
+  }
+  #sns-footer{  
+    display: flex;
+  }
+  #sns-footer > a{
+    width: 5%;
+    display: flex;
+    justify-content: center;
+  }
+  #sns-footer > a > img:first-child{
+    margin-left: 20px;
+  }
+  #sns-footer > a > img{
+    margin: auto 20px;
+    border-radius: 50%;
+    border: #fafaff solid 2px;
+    width: 50%;
+    height: 30%;
+  }
+  #sns-footer > p{
+    display: inline;
+    margin-left: 250px;
+  }
+  #sns-footer > p > span{
+    display: flex;
+    text-align: right;
+    width: 100%;
+    color: #fafaff;
+  }
 }
