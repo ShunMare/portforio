@@ -12,7 +12,7 @@ $(function(){
     }, 200);
   });
 
-  $('#main').slick({
+  $('#MainWrapper').slick({
     autoplay: true,
     dots: true,
     infinite: true,
