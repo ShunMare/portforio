@@ -1,12 +1,22 @@
+img:not([alt]) {
+  border: 10px solid red;
+}
 body{
   margin: 0;
 }
-#wrapper{
+.wrapper{
   overflow: hidden;
+  max-width: 1000px;
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:left;
 }
+/* header */
 header{
-  position: fixed;
   display: flex;
+  position: fixed;
+  justify-content: right;
   width: 100%;
   padding: 20px 0;
   top: 0;
@@ -14,6 +24,48 @@ header{
   background-color: black;
   z-index: 1;
 }
+/* footer */
+footer{
+  display: flex;
+  justify-content: right;
+  width: 100%;
+  /* padding: 20px 0; */
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  justify-content: space-between;
+}
+.footer-sns-wrapper{  
+  display: flex;
+  justify-content: flex-start;
+}
+.footer-sns-wrapper > a{
+  display: flex;
+  justify-content: center;
+}
+.footer-sns-wrapper > a > img:first-child{
+  margin-left: 20px;
+}
+.footer-sns-wrapper > a > img{
+  margin: auto 20px;
+  border-radius: 50%;
+  border: #fafaff solid 2px;
+  width: 40%;
+  height: 20%;
+}
+.footer-copyright-wrapper{
+  display: block;
+  margin-top: auto;
+  margin-right: 0;
+}
+.footer-copyright{
+  /* display: flex; */
+  margin-top: 0;
+  white-space: nowrap;
+  font-size: 5px;
+  color: #fafaff;
+}
+/* h1 */
 h1{
   position: relative;
   display: flex;
@@ -38,16 +90,10 @@ h1:before {
 h1:after {
   right: 0;
 }
-header{
-  display: flex;
-  justify-content: right;
-}
-img:not([alt]) {
-  border: 10px solid red;
-}
+/* more */
 .more{
   display: inline;
-  margin: 50px 0px 0px 0px;
+  margin: 20px 0px 0px 0px;
   padding: 5px 10px;
   border-radius: 5%;
   color: #fafaff;
@@ -62,13 +108,8 @@ img:not([alt]) {
 .more > a:hover{
   color: #333333;
 }
-.hobby-text{
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  margin: 30px 0;
-}
-#page-top {    
+/* padetop */
+#page-top{    
   position: fixed;
   bottom: 38px;
   right: 20px;
@@ -134,132 +175,77 @@ section{
   header > nav > a:hover{
     opacity: 0.5;
   }
-  article > div{
-    display: flex;
-    justify-content: center;
-    margin: 20px;
-  }
-  article > div > img{
-    border-radius: 1%;
-    width: 100%;
-  }
   section{
     margin: 20px;
     display: flex;
     justify-content: center;
+    display: block;
+    margin: 20px;
   }
-  #mypict{
+  /* about */
+  .about-img-wrapper{
     display: flex;
     justify-content: right;
-    /* text-align: right; */
+    padding-right: 20px;
   }
-  #mypict > img{
-    margin-right: 20px;
-    justify-content: center;
+  .about-img-wrapper > img{
     border-radius: 50%;
     width: 50%;
   }
-  #about-section{
+  .about-wrapper{
     display: flex;
   }
-  #about-section > div{
+  /* hobby */
+  .hobby-wrapper > div:nth-child(even) > p{
+    order: 1;
+  }
+  .hobby-wrapper > div:nth-child(even) > img{
+    order: 2;
+  }
+  .about-wrapper > div{
     margin: 0;
   }
-  #about-section > div > p{
+  .about-wrapper > div > p{
     font-size: 25px;
     margin: 0;
   }
-  #about-section > ul{
+  .about-wrapper > ul{
     display: block;
     justify-content: left;
   }
-  section{
-    display: block;
-    margin: 20px;
-  }
-  .hobby-div{
+  .hobby-contents{
     display: flex;
     justify-content: center;
     margin: 20px 30px;
+    max-width: 800px;
   }
-  .hobby-div > img{
+  .hobby-contents > img{
     border-radius: 5%;
     margin: 20px 10px;
     width: 40%;
   }
-  .hobby-text > p{
-    margin: 30px 30px 80px 10px;
+  .hobby-contents-inner{
+    display: inline-block;
+    margin: 30px;
   }
-  #hobby-section > div:nth-child(even) > p{
-    order: 1;
+  .hobby-contents-inner > p{
+    margin-top: 30px;
   }
-  #hobby-section > div:nth-child(even) > img{
-    order: 2;
+  .hobby-contents-more-wrapper{
+    display: flex;
+    justify-content: flex-end;
   }
-  table{
-    border-collapse: separate;
-    border: 0;
-    /* border-spacing: 3px; */
-    width: 100%;
-  }
-
-  table th,table td{
-    border-radius: 2px;
-    text-align: center;
-    padding: 5px 0;
-  }
-  table th{
-    background-color: black;
-    color: white;
-    border: none;
-    /* border:solid 1px darkgray; */
-  }
-  table td{
-    background-color: #333333;
-    border:solid 1px white;
-    color: lightgray;
-  }
+  /* works */
   .works-contents{
-    margin: 80px;
+    margin: 50px;
   }
   .works-contents > img{
     border-radius: 2%;
     width: 100%;
   }
-  footer{
+  .works-contents-more-wrapper{
     display: flex;
-    padding: 20px 0;
-    margin: 0;
-    width: 100%;
-    background-color: black;
-  }
-  #sns-footer{  
-    display: flex;
-  }
-  #sns-footer > a{
-    width: 5%;
-    display: flex;
-    justify-content: center;
-  }
-  #sns-footer > a > img:first-child{
-    margin-left: 20px;
-  }
-  #sns-footer > a > img{
-    margin: auto 20px;
-    border-radius: 50%;
-    border: #fafaff solid 2px;
-    width: 50%;
-    height: 30%;
-  }
-  #sns-footer > p{
-    display: block;
-    margin-left: 300px;
-  }
-  #sns-footer > p > span{
-    display: flex;
-    text-align: right;
-    width: 100%;
-    color: #fafaff;
+    justify-content: flex-end;
   }
 }
 
@@ -270,148 +256,91 @@ section{
   }
   h1{
     font-style: italic;
-    font-size: 55px;
-    /* text-decoration: underline grey; */
-    margin-top: 100px;
-    margin-bottom: 70px;
+    font-size: 40px;
+    margin: 50px 0 20px 0;
   }
-  header > nav > a{
+  .header-wrapper > a{
     margin: 20px;
-    font-size: 20px;
+    font-size: 15px;
     text-decoration: none;
     color: #fafaff;
   }
-  header > nav > a:hover{
+  .header-wrapper > a:hover{
     opacity: 0.5;
   }
-  article > div{
-    display: flex;
-    justify-content: center;
-    margin: 0;
-  }
-  article > div > img{
-    width: 100%;
-  }
   section{
-    margin: 20px;
     display: flex;
     justify-content: center;
+    margin: 0 10px;
   }
-  #mypict{
-    display: flex;
-    justify-content: right;
-    width: 40%;
+  .main-wrapper{
+    margin: 0 10px;
   }
-  #mypict > img{
-    margin-right: 20px;
-    justify-content: center;
+  .about-wrapper{
+    display: inline-block;
+    text-align: center;
+  }
+  .about-wrapper > div{
+    display: inline-block;
+    margin: 20px 25px 20px 10px;
+  }
+  .about-img-wrapper{
+    width: 50%;
+  }
+  .about-img-wrapper > img{
     border-radius: 50%;
     width: 90%;
   }
-  #about-section{
-    display: flex;
-  }
-  #about-section > div{
-    margin: 0;
-  }
-  #about-section > div > p{
+  .about-contents-wrapper > p{
     font-size: 35px;
     margin: 0;
-    margin-top: 20px;
   }
-  #about-section > ul{
-    display: block;
-    justify-content: left;
+  .about-contents-list{
+    display: inline-block;
+    text-align: left;
   }
-  section{
-    display: block;
-    margin: 20px 0;
+  .about-contents-list > li{
+    font-size: 15px;
   }
-  #hobby-section{
+  .hobby-wrapper{
     display: block;
   }
-  .hobby-div{
+  .hobby-contents{
     display: block;
     justify-content: center;
     margin: 0;
   }
-  .hobby-div > img{
+  .hobby-contents > img{
     display: block;
     /* border-radius: 5%; */
     margin: 0;
     width: 100%;
     order: 1;
   }
-  .hobby-div > p{
+  .hobby-contents-inner{
     display: block;
-    margin: 10px 20px 100px;
+  }
+  .hobby-contents-inner > p{
+    display: block;
+    margin: 10px;
     order: 2;
   }
-  /* table{
-    border-collapse: separate;
-    border: 0;
-    width: 100%;
+  .hobby-contents-more-wrapper{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
   }
-  table th,table td{
-    border-radius: 2px;
-    text-align: center;
-    padding: 5px 0;
-  }
-  table th{
-    background-color: black;
-    color: white;
-    border: none;
-  }
-  table td{
-    background-color: #333333;
-    border:solid 1px white;
-    color: lightgray;
-  } */
   .works-contents{
     margin: 50px 0;
   }
-  .works-text{
-    margin: 0 0 100px 10px;
-  }
-  .works-text > p{
-    /* margin-bottom: 1000px; */
+  .works-contents-inner{
+    margin: 10px;
   }
   .works-contents > img{
     width: 100%;
   }
-  footer{
+  .works-contents-more-wrapper{
     display: flex;
-    padding: 20px 0;
-    margin: 0;
-    width: 100%;
-    background-color: black;
-  }
-  #sns-footer{  
-    display: flex;
-  }
-  #sns-footer > a{
-    width: 5%;
-    display: flex;
-    justify-content: center;
-  }
-  #sns-footer > a > img:first-child{
-    margin-left: 20px;
-  }
-  #sns-footer > a > img{
-    margin: auto 20px;
-    border-radius: 50%;
-    border: #fafaff solid 2px;
-    width: 50%;
-    height: 30%;
-  }
-  #sns-footer > p{
-    display: inline;
-    margin-left: 250px;
-  }
-  #sns-footer > p > span{
-    display: flex;
-    text-align: right;
-    width: 100%;
-    color: #fafaff;
+    justify-content: flex-end;
   }
 }

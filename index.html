@@ -10,108 +10,113 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div id="wrapper">
-    <header>
-      <nav>
-        <a href="#">MyProfile</a>
-        <a href="#about-upper-a">About</a>
-        <a href="#hobby-upper-a">Hobby</a>
-        <a href="#works-upper-a">Works</a>
-      </nav>
-    </header>
+  <header>
+    <nav class="header-wrapper">
+      <a href="#">MyProfile</a>
+      <a href="#AboutApperA">About</a>
+      <a href="#HobbyApperA">Hobby</a>
+      <a href="#WorksApperA">Works</a>
+    </nav>
+  </header>
+  <div class= "wrapper">
     <main>
-      <article>
-        <div id="main">
-          <img src="images/main-1.jpg" class="main-img" alt="池袋からのの夜景">
-          <img src="images/main-2.jpg" class="main-img" alt="時計">
-          <img src="images/main-3.jpg" class="main-img" alt="アートの森">
+      <div class="main-wrapper" id="MainWrapper">
+        <img src="images/main-1.jpg" class="main-img" alt="池袋からのの夜景">
+        <img src="images/main-2.jpg" class="main-img" alt="時計">
+        <img src="images/main-3.jpg" class="main-img" alt="アートの森">
+      </div>
+      <a id="AboutApperA"></a>
+      <h1 id="about-h1">About</h1>
+      <section class="about-wrapper">
+        <div class="about-img-wrapper">
+          <img src="images/about.jpg" alt="自分の写真">
         </div>
-        <a id="about-upper-a"></a>
-        <h1 id="about-h1">About</h1>
-        <section id="about-section">
-          <div id="mypict">
-            <img src="images/about.jpg" alt="自分の写真">
-          </div>
-          <div>
-            <p>Okubo Shun</p>
-            <ul>
-              <li>28歳　鹿児島県出身</li>
-              <li>SE兼プログラマーとしてフリーランスで活動</li>
-              <li>趣味は筋トレと観光地巡り</li>
-              <li>海外で活躍できるエンジニアになることが目標</li>
-            </ul>
-          </div>
-        </section>
+        <div class="about-contents-wrapper">
+          <p>Okubo Shun</p>
+          <ul class="about-contents-list">
+            <li>28歳　鹿児島県出身</li>
+            <li>SE兼プログラマーとしてフリーランスで活動</li>
+            <li>趣味は筋トレと観光地巡り</li>
+            <li>海外で活躍できるエンジニアになることが目標</li>
+          </ul>
+        </div>
+      </section>
 
-        <a id="hobby-upper-a"></a>
-        <h1 id="hobby-h1">Hobby</h1>
-        <section id="hobby-section">
-          <div class="hobby-div">
-            <img src="images/hobby-1.jpg" alt="ジムにあるダンベル">
-            <div class="hobby-text">
-              <p>筋トレが趣味で、毎日ジムに通っています。健康を維持することが目的で始めた筋トレが趣味になりました。大会に出れるように努力したいと思います。</p>
+      <a id="HobbyApperA"></a>
+      <h1 id="hobby-h1">Hobby</h1>
+      <section class="hobby-wrapper">
+        <div class="hobby-contents">
+          <img src="images/hobby-1.jpg" alt="ジムにあるダンベル">
+          <div class="hobby-contents-inner">
+            <p>筋トレが趣味で、毎日ジムに通っています。健康を維持することが目的で始めた筋トレが趣味になりました。大会に出れるように努力したいと思います。</p>
+            <div class="hobby-contents-more-wrapper">
               <div class="more">
                 <a href="">MORE</a>
               </div>
             </div>
           </div>
-          <div class="hobby-div">
-            <img src="images/hobby-2.jpg" alt="雄川の滝">
-            <div class="hobby-text">
-              <p>鹿児島県東部の大隅半島（鹿児島県南大隅町）にある雄川の滝です。鹿児島に長く住んでいながら、ゴールデンウイークに初めて行きました。とても大きく迫力のある滝ですが、勢いよく水が流れているわけではありません。とても不思議な雰囲気を感じました。</p>
+        </div>
+        <div class="hobby-contents">
+          <img src="images/hobby-2.jpg" alt="雄川の滝">
+          <div class="hobby-contents-inner">
+            <p>鹿児島県東部の大隅半島（鹿児島県南大隅町）にある雄川の滝です。鹿児島に長く住んでいながら、ゴールデンウイークに初めて行きました。とても大きく迫力のある滝ですが、勢いよく水が流れているわけではありません。とても不思議な雰囲気を感じました。</p>
+            <div class="hobby-contents-more-wrapper">
               <div class="more">
                 <a href="">MORE</a>
               </div>
             </div>
           </div>
-          <div class="hobby-div" id="img-hobby3">
-            <img  src="images/hobby-3.jpg" alt="通天閣">
-            <div class="hobby-text">
-              <p>大阪の通天閣です。大学生の時は大阪のキャンパスに通っていました。遊ぶところがたくさんあり、気さくな人が多い大阪が好きです。</p>
+        </div>
+        <div class="hobby-contents" id="img-hobby3">
+          <img  src="images/hobby-3.jpg" alt="通天閣">
+          <div class="hobby-contents-inner">
+            <p>大阪の通天閣です。大学生の時は大阪のキャンパスに通っていました。遊ぶところがたくさんあり、気さくな人が多い大阪が好きです。</p>
+            <div class="hobby-contents-more-wrapper">
               <div class="more">
                 <a href="">MORE</a>
               </div>
             </div>
           </div>
-        </section>
-        
-        <a id="works-upper-a"></a>
-        <h1 id="works-h1">Works</h1>
-        <section id="works-section">
-          <div class="works-contents">
-            <img src="images/works.jpg" alt="works">
-            <div class="works-text">
-              <p>
-                フリーランスのエンジニアとして活動しています。これまでのエンジニアとしての経験は、AccessVBAによる営業管理ツールの改修、ExcelVBAによる帳票出力システムの開発、C++による画像処理アプリケーションの開発、Cを用いたスマートウォッチの開発, etc.があります。<br><br>
-                今は、WEBのフロントエンド、バックエンド開発のスキルを習得中です。エンジニアとしての領域を広げていきたいと考えています。<br><br>
-                海外で活躍できるエンジニアを目標に頑張ります。
-              </p>
-            </div>
-            <div class="more">
-              <a href="history.html">MORE</a>
-            </div>
-            </div>
-        </section>
-      </article>
-    </main>
+        </div>
+      </section>
+      <a id="WorksApperA"></a>
+      <h1 id="works-h1">Works</h1>
+      <section id="works-section">
+        <div class="works-contents">
+          <img src="images/works.jpg" alt="works">
+          <div class="works-contents-inner">
+            <p>
+              フリーランスのエンジニアとして活動しています。これまでのエンジニアとしての経験は、AccessVBAによる営業管理ツールの改修、ExcelVBAによる帳票出力システムの開発、C++による画像処理アプリケーションの開発、Cを用いたスマートウォッチの開発, etc.があります。<br><br>
+              今は、WEBのフロントエンド、バックエンド開発のスキルを習得中です。エンジニアとしての領域を広げていきたいと考えています。<br><br>
+              海外で活躍できるエンジニアを目標に頑張ります。
+            </p>
+            <div class="works-contents-more-wrapper">
+              <div class="more">
+                <a href="history.html">MORE</a>
+              </div>
+          </div>
+          </div>
+        </div>
+      </section>
+    </div>
     <footer>
-      <div id="sns-footer">
+      <div class="footer-sns-wrapper">
         <a href="https://www.facebook.com/japan.shun.o/"><img src="images/facebook.png" alt="Facebookのリンク"></a>
         <a href="https://www.instagram.com/shun.inyan/"><img src="images/instagram.png" alt="Instagramのリンク"></a>
         <a href="https://github.com/ShunMare"><img src="images/github.png" alt="GitHubのリンク"></a>
-        <p><span id="copyright">&copy;2022 ShunMare, Inc. All Rights Reserved. </span></p>
+      </div>
+      <div class="footer-copyright-wrapper">
+        <span class="footer-copyright">&copy;2022 ShunMare, Inc. All Rights Reserved. </span>
       </div>
     </footer>
-
-    <a href="#" id="page-top">TOP</a>
-    <div class="modal">
-      <img src="" alt="" class= "big-img">
-      <a href="" class="close-btn">✖</a>
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="js/script.js"></script>
+  </main>
+  <a href="#" id="page-top">TOP</a>
+  <div class="modal">
+    <img src="" alt="" class= "big-img">
+    <a href="" class="close-btn">✖</a>
   </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
