@@ -1,6 +1,9 @@
 body{
   margin: 0;
 }
+#wrapper{
+  overflow: hidden;
+}
 header{
   position: fixed;
   display: flex;
