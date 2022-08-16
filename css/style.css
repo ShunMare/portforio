@@ -27,9 +27,6 @@ header{
 /* footer */
 footer{
   display: flex;
-  justify-content: right;
-  width: 100%;
-  /* padding: 20px 0; */
   bottom: 0;
   left: 0;
   background-color: black;
@@ -41,7 +38,6 @@ footer{
 }
 .footer-sns-wrapper > a{
   display: flex;
-  justify-content: center;
 }
 .footer-sns-wrapper > a > img:first-child{
   margin-left: 20px;
@@ -55,14 +51,12 @@ footer{
 }
 .footer-copyright-wrapper{
   display: block;
-  margin-top: auto;
-  margin-right: 0;
+  margin: auto 10px 10px 0;
 }
 .footer-copyright{
-  /* display: flex; */
   margin-top: 0;
   white-space: nowrap;
-  font-size: 5px;
+  font-size: 15px;
   color: #fafaff;
 }
 /* h1 */
@@ -96,17 +90,19 @@ h1:after {
   margin: 20px 0px 0px 0px;
   padding: 5px 10px;
   border-radius: 5%;
-  color: #fafaff;
-  background-color: lightgrey;
 }
 .more > a{
-  color: #fafaff;
+  color: black;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 20px;
 }
 .more > a:link{
   text-decoration: none;
 }
 .more > a:hover{
-  color: #333333;
+  text-decoration: underline;
+  color: gray;
 }
 /* padetop */
 #page-top{    
@@ -160,11 +156,6 @@ section{
 @media screen  and (min-width: 768px) {
   body{
     margin-top: 100px;
-  }
-  .more{
-    /* vertical-align: middle; */
-    /* width: 50px; */
-    /* height: 30px; */
   }
   header > nav > a{
     margin: 10px 30px;
@@ -269,12 +260,13 @@ section{
     opacity: 0.5;
   }
   section{
-    display: flex;
-    justify-content: center;
     margin: 0 10px;
   }
   .main-wrapper{
     margin: 0 10px;
+  }
+  .main-img{
+    border-radius: 2%;
   }
   .about-wrapper{
     display: inline-block;
@@ -312,8 +304,8 @@ section{
   }
   .hobby-contents > img{
     display: block;
-    /* border-radius: 5%; */
     margin: 0;
+    border-radius: 2%;
     width: 100%;
     order: 1;
   }
@@ -331,12 +323,13 @@ section{
     margin-bottom: 20px;
   }
   .works-contents{
-    margin: 50px 0;
+    margin: 50px 0 80px 0;
   }
   .works-contents-inner{
     margin: 10px;
   }
   .works-contents > img{
+    border-radius: 2%;
     width: 100%;
   }
   .works-contents-more-wrapper{

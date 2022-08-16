@@ -1,14 +1,24 @@
+img:not([alt]) {
+  border: 10px solid red;
+}
 body{
   position: relative;
   margin: 0;
   background-color: black;
-  /* background-image: url("../images/history/history1.jpg"); */
-  /* opacity: 0.5; */
-  background-size: cover;
 }
+.wrapper{
+  /* overflow: hidden; */
+  max-width: 1000px;
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:left;
+}
+/* header */
 header{
-  position: fixed;
   display: flex;
+  position: fixed;
+  justify-content: right;
   width: 100%;
   padding: 20px 0;
   top: 0;
@@ -16,6 +26,43 @@ header{
   background-color: black;
   z-index: 1;
 }
+/* footer */
+footer{
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  justify-content: space-between;
+}
+.footer-sns-wrapper{  
+  display: flex;
+  justify-content: flex-start;
+}
+.footer-sns-wrapper > a{
+  display: flex;
+}
+.footer-sns-wrapper > a > img:first-child{
+  margin-left: 20px;
+}
+.footer-sns-wrapper > a > img{
+  margin: auto 20px;
+  border-radius: 50%;
+  border: #fafaff solid 2px;
+  width: 40%;
+  height: 20%;
+}
+.footer-copyright-wrapper{
+  display: block;
+  margin: auto 10px 10px 0;
+}
+.footer-copyright{
+  margin-top: 0;
+  white-space: nowrap;
+  font-size: 15px;
+  color: #fafaff;
+}
+/* h1 */
 h1{
   position: relative;
   display: flex;
@@ -40,31 +87,28 @@ h1:before {
 h1:after {
   right: 0;
 }
-header{
-  display: flex;
-  justify-content: right;
-}
-img:not([alt]) {
-  border: 10px solid red;
-}
-#more{
+/* more */
+.more{
   display: inline;
-  margin: 50px 0px 0px 0px;
+  margin: 20px 0px 0px 0px;
   padding: 5px 10px;
   border-radius: 5%;
-  color: #fafaff;
-  background-color: lightgrey;
 }
-#more > a{
-  color: #fafaff;
+.more > a{
+  color: black;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 20px;
 }
-#more > a:link{
+.more > a:link{
   text-decoration: none;
 }
-#more > a:hover{
-  color: #333333;
+.more > a:hover{
+  text-decoration: underline;
+  color: gray;
 }
-#page-top {    
+/* padetop */
+#page-top{    
   position: fixed;
   bottom: 38px;
   right: 20px;
@@ -173,7 +217,6 @@ main{
   display: none;
   width: 90px;
   height: 90px;
-  /* border: #000000 2px solid; */
   border-radius: 50%;
 }
 .circle > img{
@@ -323,43 +366,6 @@ main{
     border-radius: 2%;
     width: 100%;
   }
-  footer{
-    position: absolute;
-    bottom: 0;
-    padding: 100px 0;
-    /* margin: 0; */
-    /* margin-top: 100px; */
-    width: 100%;
-    background-color: black;
-  }
-  #sns-footer{  
-    display: flex;
-  }
-  #sns-footer > a{
-    width: 5%;
-    display: flex;
-    justify-content: center;
-  }
-  #sns-footer > a > img:first-child{
-    margin-left: 20px;
-  }
-  #sns-footer > a > img{
-    margin: auto 20px;
-    border-radius: 50%;
-    border: #fafaff solid 2px;
-    width: 50%;
-    height: 30%;
-  }
-  #sns-footer > p{
-    display: block;
-    margin-left: 300px;
-  }
-  #sns-footer > p > span{
-    display: flex;
-    text-align: right;
-    width: 100%;
-    color: #fafaff;
-  }
 }
 
 @media screen and (max-width: 767px) {
@@ -370,7 +376,6 @@ main{
   h1{
     font-style: italic;
     font-size: 55px;
-    /* text-decoration: underline grey; */
     margin-top: 100px;
     margin-bottom: 70px;
   }
@@ -436,7 +441,6 @@ main{
   }
   .hobby-div > img{
     display: block;
-    /* border-radius: 5%; */
     margin: 0;
     width: 100%;
     order: 1;
@@ -446,72 +450,13 @@ main{
     margin: 10px 20px 100px;
     order: 2;
   }
-  /* table{
-    border-collapse: separate;
-    border: 0;
-    width: 100%;
-  }
-  table th,table td{
-    border-radius: 2px;
-    text-align: center;
-    padding: 5px 0;
-  }
-  table th{
-    background-color: black;
-    color: white;
-    border: none;
-  }
-  table td{
-    background-color: #333333;
-    border:solid 1px white;
-    color: lightgray;
-  } */
   .works-contents{
     margin: 50px 0;
   }
   .works-text{
     margin: 0 0 100px 10px;
   }
-  /* .works-text > p{ */
-    /* margin-bottom: 1000px; */
-  /* } */
   .works-contents > img{
     width: 100%;
-  }
-  footer{
-    position: relative;
-    /* display: flex; */
-    padding: 20px 0;
-    margin: 0;
-    width: 100%;
-    background-color: black;
-  }
-  #sns-footer{  
-    display: flex;
-  }
-  #sns-footer > a{
-    width: 5%;
-    display: flex;
-    justify-content: center;
-  }
-  #sns-footer > a > img:first-child{
-    margin-left: 20px;
-  }
-  #sns-footer > a > img{
-    margin: auto 20px;
-    border-radius: 50%;
-    border: #fafaff solid 2px;
-    width: 50%;
-    height: 30%;
-  }
-  #sns-footer > p{
-    display: inline;
-    margin-left: 250px;
-  }
-  #sns-footer > p > span{
-    display: flex;
-    text-align: right;
-    width: 100%;
-    color: #fafaff;
   }
 }
