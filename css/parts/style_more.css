@@ -1,0 +1,24 @@
+.more{
+  display: inline;
+  margin: 20px 0px 0px 0px;
+  padding: 5px 10px;
+  border-radius: 5%;
+}
+.more > a{
+  color: black;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 20px;
+}
+.more > a:link{
+  text-decoration: none;
+}
+.more > a:hover{
+  text-decoration: underline;
+  color: gray;
+}
+@media screen  and (min-width: 768px) {
+}
+
+@media screen and (max-width: 767px) {
+}

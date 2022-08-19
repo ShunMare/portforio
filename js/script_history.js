@@ -62,7 +62,7 @@ initAngleData();
 changeDisplay();
 
 /**
- * "move" click event
+ * click event
  * @param  {NULL} 
  * @return {NULL}          
  */
