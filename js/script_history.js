@@ -37,13 +37,12 @@ const ANGLE_BEGIN_POS_ARRAY = [240 , 270, 300, 330, 360, 390, 420];
 const ANGLE_END_POS_ARRAY   = [270 , 300, 330, 360, 390, 420, 450];
 var PosArray        = [1 ,2 , 3, 4, 5, 6, 7, 8, 9, 10];
 var AngleArray      = [0 ,0 , 0, 0, 0, 0, 0];
-var roundElement    = document.getElementById('round');
-var roundClientRect = roundElement.getBoundingClientRect();
-var roundWidth      = getComputedStyle(roundElement).width;
-var roundTop        = getComputedStyle(roundElement).top;
-var roundLeft       = getComputedStyle(roundElement).left;
+var eiOrbit            = document.getElementById('Orbit');
+var eiCircleWrapper    = document.getElementById('CircleWrapper');
+var crOrbit           = eiOrbit.getBoundingClientRect();
+var crCircleWrapper   = eiCircleWrapper.getBoundingClientRect();
 
-
+var WrapperMaxWidth = document.getElementById('Wrapper').style.maxWidth;
 
 initAngleData();
 let cntArray = 0;
@@ -87,11 +86,11 @@ window.addEventListener('click', function(){
 function initAngleData() {
   for(let cntArray = 0; cntArray < PosArray.length; cntArray++){
     AngleArray[cntArray] = ANGLE_BEGIN_POS_ARRAY[cntArray];
-    document.getElementById('circle-' + PosArray[cntArray]).style.display = "inline";
+    document.getElementById('Circle' + PosArray[cntArray]).style.display = "inline";
   }
-  document.getElementById('circle-' + PosArray[4]).children[0].style.borderWidth = "2px";
-  document.getElementById('circle-' + PosArray[4]).children[0].style.borderStyle = "solid";
-  document.getElementById('circle-' + PosArray[4]).children[0].style.borderColor = "gray";
+  document.getElementById('Circle' + PosArray[4]).children[0].style.borderWidth = "2px";
+  document.getElementById('Circle' + PosArray[4]).children[0].style.borderStyle = "solid";
+  document.getElementById('Circle' + PosArray[4]).children[0].style.borderColor = "gray";
 };
 
 /**
@@ -101,17 +100,23 @@ function initAngleData() {
  * @return {NULL}          
  */
 function circumference(circleNo, angle) {
-  var circleElement = document.getElementById('circle-' + circleNo);
-  var circleWidth = getComputedStyle(circleElement).width;
-  roundRadius = roundWidth.replace('px', '')/2;
-  circleWidth = circleWidth.replace('px', '');
-  var centerX = roundClientRect.left + roundRadius;
-  var centerY = roundClientRect.top + roundRadius;
-  
-  var moveX   = Math.cos(angle*Math.PI/180)*roundRadius + centerX - circleWidth/2;
-  var moveY   = Math.sin(angle*Math.PI/180)*roundRadius + centerY - circleWidth/2;
-  circleElement.style.left  = moveX + 'px';
-  circleElement.style.top   = moveY + 'px';
+  var eiCircle = document.getElementById('Circle' + circleNo);
+  var eiHeader = document.getElementById('Header');
+  var crCircle = eiCircle.getBoundingClientRect();
+  var crHeader = eiHeader.getBoundingClientRect();
+
+  var OrbitRadius = crOrbit.width/2;
+  var centerX, centerY;
+  if(document.body.offsetWidth >= WrapperMaxWidth){
+    centerX = OrbitRadius;
+  }else{
+    centerX = (document.body.offsetWidth/2) - crCircleWrapper.left;
+  }
+  centerY     = OrbitRadius;
+  var moveX   = Math.cos(angle*Math.PI/180)*OrbitRadius;
+  var moveY   = Math.sin(angle*Math.PI/180)*OrbitRadius;
+  eiCircle.style.top   = (centerY + moveY - crCircle.width/2) + 'px';
+  eiCircle.style.left  = (centerX + moveX - crCircle.height/2) + 'px';
 };
 
 /**
@@ -136,10 +141,10 @@ function swapArray() {
  * @return {NULL}          
  */
 function changeDisplay() {
-  document.getElementById('circle-' + PosArray[0]).style.display = "none";
+  document.getElementById('Circle' + PosArray[0]).style.display = "none";
   for(let cntHidden = 1; cntHidden < PosArray.length - 5; cntHidden++){
-    document.getElementById('circle-' + PosArray[PosArray.length - cntHidden]).style.display = "none";
-    // document.querySelector('#circle-' + PosArray[PosArray.length - cntHidden]).animate(
+    document.getElementById('Circle' + PosArray[PosArray.length - cntHidden]).style.display = "none";
+    // document.querySelector('#Circle' + PosArray[PosArray.length - cntHidden]).animate(
   //     [
   //       { opacity: 1},
   //       { opacity: 0}
@@ -150,9 +155,9 @@ function changeDisplay() {
   //     }
   //   );
   }
-  document.getElementById('circle-' + PosArray[3]).children[0].style.borderWidth = "5px";
-  document.getElementById('circle-' + PosArray[3]).children[0].style.borderStyle = "double";
-  document.getElementById('circle-' + PosArray[3]).children[0].style.borderColor = "white";
+  document.getElementById('Circle' + PosArray[3]).children[0].style.borderWidth = "5px";
+  document.getElementById('Circle' + PosArray[3]).children[0].style.borderStyle = "double";
+  document.getElementById('Circle' + PosArray[3]).children[0].style.borderColor = "white";
 }
 
 /**
@@ -162,11 +167,18 @@ function changeDisplay() {
  */
  function changeText() {
   var PosNo = PosArray[3];
-  console.log(PosArray[3]);
-  var src = document.getElementById('circle-' + PosArray[3]).children[0].getAttribute('src');
-  document.getElementById('main-div').style.backgroundImage = 
-    "linear-gradient(110deg, rgba(80,20,100,0.6) 50%, rgba(5,100,100,0.6) 50%), url(" + src + ")";
-  document.getElementById('main-when').innerHTML = TEXT_WHEN[PosNo - 1];
-  document.getElementById('main-title').innerHTML = TEXT_TITLE[PosNo - 1];
-  document.getElementById('main-content').innerHTML = TEXT_CONTENT[PosNo - 1];
+  var src = document.getElementById('Circle' + PosArray[3]).children[0].getAttribute('src');
+
+  document.getElementById('MainContentsWrapper').style.background = 
+    "-moz-linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.0)), url(" + src + ")";
+  document.getElementById('MainContentsWrapper').style.background = 
+    "-webkit-linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.0)), url(" + src + ")";
+  document.getElementById('MainContentsWrapper').style.background = 
+    "linear-gradient(0deg, rgba(10, 10, 10, 0.9), rgba(255, 255, 255, 0.0)), url(" + src + ")";
+  document.getElementById('MainContentsWrapper').style.backgroundSize   = "contain";
+  document.getElementById('MainContentsWrapper').style.backgroundRepeat = "no-repeat";
+
+  document.getElementById('MainWhen').innerHTML = TEXT_WHEN[PosNo - 1];
+  document.getElementById('MainTitle').innerHTML = TEXT_TITLE[PosNo - 1];
+  document.getElementById('MainContent').innerHTML = TEXT_CONTENT[PosNo - 1];
 }
