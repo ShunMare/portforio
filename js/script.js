@@ -1,3 +1,5 @@
+$("img.lazyload").lazyload();
+
 $(function(){
   $('.more').on('mouseover', function(){
     $(this).animate({

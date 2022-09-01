@@ -27,15 +27,15 @@
   <div class= "wrapper">
     <main>
       <div class="main-wrapper" id="MainWrapper">
-        <img src="images/main-1.jpg" class="main-img" alt="池袋からのの夜景">
-        <img src="images/main-2.jpg" class="main-img" alt="時計">
-        <img src="images/main-3.jpg" class="main-img" alt="アートの森">
+        <img class="lazyload" data-src="images/main-1.jpg" class="main-img" alt="池袋からのの夜景">
+        <img class="lazyload" data-src="images/main-2.jpg" class="main-img" alt="時計">
+        <img class="lazyload" data-src="images/main-3.jpg" class="main-img" alt="アートの森">
       </div>
       <a id="AboutApperA"></a>
       <h1 id="about-h1">About</h1>
       <section class="about-wrapper">
         <div class="about-img-wrapper">
-          <img src="images/about.jpg" alt="自分の写真">
+          <img class="lazyload" data-src="images/about.jpg" alt="自分の写真">
         </div>
         <div class="about-contents-wrapper">
           <p>Okubo Shun</p>
@@ -51,7 +51,7 @@
       <h1 id="hobby-h1">Hobby</h1>
       <section class="hobby-wrapper">
         <div class="hobby-contents">
-          <img src="images/hobby-1.jpg" alt="ジムにあるダンベル">
+          <img class="lazyload" data-src="images/hobby-1.jpg" alt="ジムにあるダンベル">
           <div class="hobby-contents-inner">
             <p>筋トレが趣味で、毎日ジムに通っています。健康を維持することが目的で始めた筋トレが趣味になりました。大会に出れるように努力したいと思います。</p>
             <div class="hobby-contents-more-wrapper">
@@ -62,7 +62,7 @@
           </div>
         </div>
         <div class="hobby-contents">
-          <img src="images/hobby-2.jpg" alt="雄川の滝">
+          <img class="lazyload" data-src="images/hobby-2.jpg" alt="雄川の滝">
           <div class="hobby-contents-inner">
             <p>鹿児島県東部の大隅半島（鹿児島県南大隅町）にある雄川の滝です。鹿児島に長く住んでいながら、ゴールデンウイークに初めて行きました。とても大きく迫力のある滝ですが、勢いよく水が流れているわけではありません。とても不思議な雰囲気を感じました。</p>
             <div class="hobby-contents-more-wrapper">
@@ -73,7 +73,7 @@
           </div>
         </div>
         <div class="hobby-contents" id="img-hobby3">
-          <img  src="images/hobby-3.jpg" alt="通天閣">
+          <img  class="lazyload" data-src="images/hobby-3.jpg" alt="通天閣">
           <div class="hobby-contents-inner">
             <p>大阪の通天閣です。大学生の時は大阪のキャンパスに通っていました。遊ぶところがたくさんあり、気さくな人が多い大阪が好きです。</p>
             <div class="hobby-contents-more-wrapper">
@@ -88,7 +88,7 @@
       <h1 id="works-h1">Works</h1>
       <section id="works-section">
         <div class="works-contents">
-          <img src="images/works.jpg" alt="works">
+          <img class="lazyload" data-src="images/works.jpg" alt="works">
           <div class="works-contents-inner">
             <p>
               フリーランスのエンジニアとして活動しています。これまでのエンジニアとしての経験は、AccessVBAによる営業管理ツールの改修、ExcelVBAによる帳票出力システムの開発、C++による画像処理アプリケーションの開発、Cを用いたスマートウォッチの開発, etc.があります。<br><br>
@@ -106,9 +106,9 @@
     </main>
       <footer>
         <div class="footer-sns-wrapper">
-          <a href="https://www.facebook.com/japan.shun.o/"><img src="images/facebook.png" alt="Facebookのリンク"></a>
-          <a href="https://www.instagram.com/shun.inyan/"><img src="images/instagram.png" alt="Instagramのリンク"></a>
-          <a href="https://github.com/ShunMare"><img src="images/github.png" alt="GitHubのリンク"></a>
+          <a href="https://www.facebook.com/japan.shun.o/"><img class="lazyload" data-src="images/facebook.png" alt="Facebookのリンク"></a>
+          <a href="https://www.instagram.com/shun.inyan/"><img class="lazyload" data-src="images/instagram.png" alt="Instagramのリンク"></a>
+          <a href="https://github.com/ShunMare"><img class="lazyload" data-src="images/github.png" alt="GitHubのリンク"></a>
         </div>
         <div class="footer-copyright-wrapper">
           <span class="footer-copyright">&copy;2022 ShunMare, Inc. All Rights Reserved. </span>
@@ -117,11 +117,12 @@
   </div>
   <a href="#" id="page-top">TOP</a>
   <div class="modal">
-    <img src="" alt="" class= "big-img">
+    <img class="lazyload" data-src="" alt="" class= "big-img">
     <a href="" class="close-btn">✖</a>
   </div>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
