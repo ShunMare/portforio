@@ -1,4 +1,4 @@
-.orbit{
+.orbit {
   position: relative;
   width: 100%;
   height: 100%;
@@ -8,8 +8,8 @@
   opacity: 0.4;
 }
 
-@media screen  and (min-width: 768px) {
-  .circle{
+@media screen and (min-width: 768px) {
+  .circle {
     position: absolute;
     display: flex;
     top: -45px;
@@ -18,7 +18,7 @@
     height: 90px;
     border-radius: 50%;
   }
-  .circle > img{
+  .circle > img {
     position: absolute;
     top: 0;
     left: 0;
@@ -31,9 +31,8 @@
     border-radius: 50%;
   }
 }
-
 @media screen and (max-width: 767px) {
-  .circle{
+  .circle {
     position: absolute;
     display: flex;
     top: -45px;
@@ -42,7 +41,7 @@
     height: 90px;
     border-radius: 50%;
   }
-  .circle > img{
+  .circle > img {
     position: absolute;
     top: 0;
     left: 0;
@@ -54,4 +53,4 @@
     background: black;
     border-radius: 50%;
   }
-}
+}/*# sourceMappingURL=style_orbit.css.map */

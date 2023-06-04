@@ -1,4 +1,4 @@
-.big-img{
+.big-img {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -8,17 +8,12 @@
   max-width: 800px;
   margin: auto;
 }
-.close-btn{
+
+.close-btn {
   position: absolute;
   top: 10px;
   right: 20px;
   color: white;
   font-size: 40px;
   text-decoration: none;
-}
-
-@media screen  and (min-width: 768px) {
-}
-
-@media screen and (max-width: 767px) {
-}
+}/*# sourceMappingURL=style_bigimg.css.map */

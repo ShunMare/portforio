@@ -1,4 +1,4 @@
-.orbit{
+.orbit {
   position: relative;
   width: 100%;
   height: 100%;
@@ -6,10 +6,4 @@
   border-right: lightgray 15px solid;
   border-radius: 50%;
   opacity: 0.4;
-}
-
-@media screen  and (min-width: 768px) {
-}
-
-@media screen and (max-width: 767px) {
-}
+}/*# sourceMappingURL=style_circle.css.map */

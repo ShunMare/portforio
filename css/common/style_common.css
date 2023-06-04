@@ -1,18 +1,21 @@
 img:not([alt]) {
   border: 10px solid red;
 }
-body{
+
+body {
   margin: 0;
 }
-.wrapper{
+
+.wrapper {
   overflow: hidden;
   max-width: 1000px;
-  text-align:center;
-  margin-left:auto;
-  margin-right:auto;
-  text-align:left;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
 }
-h1{
+
+h1 {
   position: relative;
   display: flex;
   padding: 0 55px;
@@ -22,7 +25,7 @@ h1{
   margin-bottom: 40px;
 }
 h1:before, h1:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   display: inline-block;
@@ -31,19 +34,22 @@ h1:before, h1:after {
   border-top: solid 1px black;
 }
 h1:before {
-  left:0;
+  left: 0;
 }
 h1:after {
   right: 0;
 }
-section{
+
+section {
   opacity: 0;
   transition: 1s;
 }
-.fade-in{
+
+.fade-in {
   opacity: 1;
 }
-.modal{
+
+.modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -52,7 +58,8 @@ section{
   background-color: rgba(0, 0, 0, 0.8);
   display: none;
 }
-.big-img{
+
+.big-img {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -62,7 +69,8 @@ section{
   max-width: 800px;
   margin: auto;
 }
-.close-btn{
+
+.close-btn {
   position: absolute;
   top: 10px;
   right: 20px;
@@ -70,11 +78,12 @@ section{
   font-size: 40px;
   text-decoration: none;
 }
-@media screen  and (min-width: 768px) {
-  body{
+
+@media screen and (min-width: 768px) {
+  body {
     margin-top: 100px;
   }
-  section{
+  section {
     margin: 20px;
     display: flex;
     justify-content: center;
@@ -82,18 +91,17 @@ section{
     margin: 20px;
   }
 }
-
 @media screen and (max-width: 767px) {
-  body{
+  body {
     margin-top: 80px;
     font-family: "Book Antiqua", "Yu Mincho";
   }
-  h1{
+  h1 {
     font-style: italic;
     font-size: 40px;
     margin: 50px 0 20px 0;
   }
-  section{
+  section {
     margin: 0 10px;
   }
-}
+}/*# sourceMappingURL=style_common.css.map */
