@@ -17,20 +17,22 @@
     width: 90px;
     height: 90px;
     border-radius: 50%;
-  }
-  .circle > img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    width: 90px;
-    height: 90px;
-    opacity: 0.9;
-    border: gray 2px solid;
-    background: black;
-    border-radius: 50%;
+
+    > img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      width: 90px;
+      height: 90px;
+      opacity: 0.9;
+      border: gray 2px solid;
+      background: black;
+      border-radius: 50%;
+    }
   }
 }
+
 @media screen and (max-width: 767px) {
   .circle {
     position: absolute;
@@ -40,17 +42,18 @@
     width: 90px;
     height: 90px;
     border-radius: 50%;
+
+    > img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      width: 90px;
+      height: 90px;
+      opacity: 0.9;
+      border: gray 2px solid;
+      background: black;
+      border-radius: 50%;
+    }
   }
-  .circle > img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    width: 90px;
-    height: 90px;
-    opacity: 0.9;
-    border: gray 2px solid;
-    background: black;
-    border-radius: 50%;
-  }
-}/*# sourceMappingURL=style_orbit.css.map */
+}

@@ -1,29 +1,35 @@
 @media screen and (min-width: 768px) {
   .works-contents {
     margin: 50px;
+
+    > img {
+      border-radius: 2%;
+      width: 100%;
+    }
   }
-  .works-contents > img {
-    border-radius: 2%;
-    width: 100%;
-  }
+
   .works-contents-more-wrapper {
     display: flex;
     justify-content: flex-end;
   }
 }
+
 @media screen and (max-width: 767px) {
   .works-contents {
     margin: 50px 0 80px 0;
   }
+
   .works-contents-inner {
     margin: 10px;
   }
+
   .works-contents > img {
     border-radius: 2%;
     width: 100%;
   }
+
   .works-contents-more-wrapper {
     display: flex;
     justify-content: flex-end;
   }
-}/*# sourceMappingURL=style_works.css.map */
+}

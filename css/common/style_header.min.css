@@ -1,0 +1,2 @@
+header{display:flex;position:fixed;justify-content:right;width:100%;padding:20px 0;top:0;left:0;background-color:#000;z-index:1}@media screen and (min-width: 768px){header>nav>a{margin:10px 30px;font-size:15px;text-decoration:none;color:#fafaff}header>nav>a:hover{opacity:.5}}@media screen and (max-width: 767px){.header-wrapper>a{margin:20px;font-size:15px;text-decoration:none;color:#fafaff}.header-wrapper>a:hover{opacity:.5}}
+/*# sourceMappingURL=style_header.min.css.map */
