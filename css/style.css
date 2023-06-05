@@ -24,7 +24,6 @@ h1 {
   margin-top: 100px;
   margin-bottom: 40px;
 }
-
 h1:before, h1:after {
   content: "";
   position: absolute;
@@ -34,11 +33,9 @@ h1:before, h1:after {
   height: 2px;
   border-top: solid 1px black;
 }
-
 h1:before {
   left: 0;
 }
-
 h1:after {
   right: 0;
 }
@@ -154,21 +151,18 @@ footer {
   display: flex;
   justify-content: flex-start;
 }
-
 .footer-sns-wrapper > a {
   display: flex;
 }
-
-.footer-sns-wrapper > a > img:first-child {
-  margin-left: 20px;
-}
-
 .footer-sns-wrapper > a > img {
   margin: auto 20px;
   border-radius: 50%;
   border: #fafaff solid 2px;
   width: 40%;
   height: 20%;
+}
+.footer-sns-wrapper > a > img:first-child {
+  margin-left: 20px;
 }
 
 .footer-copyright-wrapper {
@@ -209,23 +203,48 @@ footer {
   padding: 5px 10px;
   border-radius: 5%;
 }
-
 .more > a {
   color: black;
   font-style: italic;
   font-weight: bold;
   font-size: 20px;
 }
-
 .more > a:link {
   text-decoration: none;
 }
-
 .more > a:hover {
   text-decoration: underline;
   color: gray;
 }
 
+.gallery {
+  -moz-columns: 4;
+       columns: 4;
+  padding: 0 15px;
+  margin: 0;
+}
+.gallery li {
+  margin-bottom: 20px;
+  list-style: none;
+}
+.gallery img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+@media only screen and (max-width: 900px) {
+  .gallery {
+    -moz-columns: 3;
+         columns: 3;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .gallery {
+    -moz-columns: 2;
+         columns: 2;
+  }
+}
 @media screen and (max-width: 767px) {
   .main-wrapper {
     margin: 0 10px;
