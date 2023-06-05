@@ -1,0 +1,2 @@
+.gallery{-moz-columns:4;columns:4;padding:0 15px;margin:0}.gallery li{margin-bottom:20px;list-style:none}.gallery img{width:100%;height:auto;vertical-align:bottom}@media only screen and (max-width: 900px){.gallery{-moz-columns:3;columns:3}}@media only screen and (max-width: 768px){.gallery{-moz-columns:2;columns:2}}
+/*# sourceMappingURL=style_gallery.min.css.map */
