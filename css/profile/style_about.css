@@ -9,7 +9,8 @@
     width: 50%;
   }
   .about-wrapper {
-    display: flex;
+    display: grid;
+    grid-template-columns: 50% 50%;
   }
   .about-wrapper > div {
     margin: 0;

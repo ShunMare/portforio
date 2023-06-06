@@ -1,35 +1,33 @@
 header {
-  display: flex;
   position: fixed;
-  justify-content: right;
+  display: flex;
+  justify-content: center;
   width: 100%;
-  padding: 20px 0;
+  padding: 2vw 0;
   top: 0;
   left: 0;
   background-color: black;
   z-index: 1;
 }
 
+.header-wrapper a {
+  text-decoration: none;
+  color: #fafaff;
+}
+.header-wrapper:hover {
+  opacity: 0.5;
+}
+
 @media screen and (min-width: 768px) {
-  header > nav > a {
+  .header-wrapper a {
+    font-size: 20px;
     margin: 10px 30px;
-    font-size: 15px;
-    text-decoration: none;
-    color: #fafaff;
-  }
-  header > nav > a:hover {
-    opacity: 0.5;
   }
 }
 @media screen and (max-width: 767px) {
-  .header-wrapper > a {
+  .header-wrapper a {
+    font-size: 10px;
     margin: 20px;
-    font-size: 15px;
-    text-decoration: none;
-    color: #fafaff;
-  }
-  .header-wrapper > a:hover {
-    opacity: 0.5;
   }
 }
 footer {
@@ -44,21 +42,18 @@ footer {
   display: flex;
   justify-content: flex-start;
 }
-
 .footer-sns-wrapper > a {
   display: flex;
 }
-
-.footer-sns-wrapper > a > img:first-child {
-  margin-left: 20px;
-}
-
 .footer-sns-wrapper > a > img {
   margin: auto 20px;
   border-radius: 50%;
   border: #fafaff solid 2px;
   width: 40%;
   height: 20%;
+}
+.footer-sns-wrapper > a > img:first-child {
+  margin-left: 20px;
 }
 
 .footer-copyright-wrapper {
@@ -190,7 +185,7 @@ main {
   position: relative;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   margin: 0;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255, 255, 255);
 }
 
 .main-when {
