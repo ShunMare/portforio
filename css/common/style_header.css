@@ -13,7 +13,7 @@ header {
   text-decoration: none;
   color: #fafaff;
 }
-.header-wrapper:hover {
+.header-wrapper a:hover {
   opacity: 0.5;
 }
 
