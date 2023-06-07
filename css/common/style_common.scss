@@ -6,8 +6,11 @@ body {
   margin: 0;
 }
 
+.container {
+  overflow:hidden;
+}
+
 .wrapper {
-  overflow: hidden;
   max-width: 1000px;
   text-align: center;
   margin-left: auto;
