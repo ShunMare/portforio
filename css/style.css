@@ -410,4 +410,7 @@ footer {
     display: flex;
     justify-content: flex-end;
   }
+}
+#pieChart {
+  margin: 20px 0px;
 }/*# sourceMappingURL=style.css.map */
