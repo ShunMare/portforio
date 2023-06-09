@@ -6,7 +6,8 @@
   }
   .about-img-wrapper > img {
     border-radius: 50%;
-    width: 50%;
+    width: 60%;
+    height: auto;
   }
   .about-wrapper {
     display: grid;
@@ -38,7 +39,8 @@
   }
   .about-img-wrapper > img {
     border-radius: 50%;
-    width: 90%;
+    width: 100%;
+    height: auto;
   }
   .about-contents-wrapper > p {
     font-size: 35px;
@@ -51,4 +53,5 @@
   .about-contents-list > li {
     font-size: 15px;
   }
-}/*# sourceMappingURL=style_about.css.map */
+}
+/*# sourceMappingURL=style_about.css.map */

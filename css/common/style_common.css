@@ -4,6 +4,7 @@ img:not([alt]) {
 
 body {
   margin: 0;
+  font-family: "Book Antiqua", "Yu Mincho";
 }
 
 .container {
@@ -92,9 +93,6 @@ section {
   }
 }
 @media screen and (max-width: 767px) {
-  body {
-    font-family: "Book Antiqua", "Yu Mincho";
-  }
   h1 {
     font-style: italic;
     font-size: 40px;

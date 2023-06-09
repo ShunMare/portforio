@@ -4,6 +4,7 @@ img:not([alt]) {
 
 body {
   margin: 0;
+  font-family: "Book Antiqua", "Yu Mincho";
 }
 
 .container {
@@ -92,9 +93,6 @@ section {
   }
 }
 @media screen and (max-width: 767px) {
-  body {
-    font-family: "Book Antiqua", "Yu Mincho";
-  }
   h1 {
     font-style: italic;
     font-size: 40px;
@@ -108,6 +106,7 @@ header {
   display: flex;
   justify-content: center;
   width: 100%;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   left: 0;
@@ -273,7 +272,8 @@ footer {
   }
   .about-img-wrapper > img {
     border-radius: 50%;
-    width: 50%;
+    width: 70%;
+    height: auto;
   }
   .about-wrapper {
     display: grid;
@@ -305,7 +305,8 @@ footer {
   }
   .about-img-wrapper > img {
     border-radius: 50%;
-    width: 90%;
+    width: 100%;
+    height: auto;
   }
   .about-contents-wrapper > p {
     font-size: 35px;
@@ -413,4 +414,51 @@ footer {
 }
 #pieChart {
   margin: 20px 0px;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.accordion-wrap {
+  border-bottom: 1px solid #ddba4d;
+}
+.accordion-wrap:first-of-type .accordion-text {
+  display: block;
+}
+
+.accordion-item {
+  width: 100%;
+  margin: 0 auto;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.accordion-header {
+  transition: ease-in-out 100ms;
+}
+
+.accordion-text {
+  width: 100%;
+  display: none;
+  padding-top: 5px;
+  padding-bottom: 20px;
+}
+
+.fa {
+  transition: ease-in-out 300ms;
+}
+
+.rotate-fa {
+  transform: rotate(180deg);
+}
+
+.accordion-header .fa {
+  float: right;
+  line-height: 35px;
+}
+
+.accordion-gold {
+  color: #ddba4d;
+}
+
+.accordion-no-bar {
+  border-bottom: 0;
+}
+/*# sourceMappingURL=style.css.map */
