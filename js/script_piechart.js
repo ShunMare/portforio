@@ -55,8 +55,6 @@ skillArray = filteredSkillArray;
 skillDurations = filteredSkillDurations;
 
 var skillDurationsPairs = skillArray.map(function (skillItem, index) {
-  console.log(skillItem);
-  console.log(skillDurations[index]);
   return {item: skillItem, duration: skillDurations[index]};
 });
 skillDurationsPairs.sort(function (a, b) {
