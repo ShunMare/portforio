@@ -272,7 +272,7 @@ footer {
   }
   .about-img-wrapper > img {
     border-radius: 50%;
-    width: 70%;
+    width: 60%;
     height: auto;
   }
   .about-wrapper {
@@ -460,5 +460,50 @@ footer {
 
 .accordion-no-bar {
   border-bottom: 0;
+}
+
+.tooltip {
+  position: relative;
+  cursor: pointer;
+  padding: 0 5px;
+  font-size: 0.9em;
+  color: #4682b4;
+}
+
+.balloon_top {
+  width: 150px;
+  position: absolute;
+  left: 50%;
+  bottom: 80%;
+  transform: translateX(-50%);
+  margin-bottom: 15px;
+  padding: 8px;
+  border-radius: 10px;
+  background-color: #666;
+  font-size: 0.7em;
+  color: #fff;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1;
+  transition: 0.5s all;
+}
+
+.balloon_top::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top: 12px solid #666;
+  position: absolute;
+  top: 99%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip:hover .balloon_top {
+  bottom: 100%;
+  visibility: visible;
+  opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */
