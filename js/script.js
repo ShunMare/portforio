@@ -23,8 +23,21 @@ $(function(){
   });
 
   $(window).scroll(function () { 
+    const scrollAmount = $(window).scrollTop();
+    const windowHeight = $(window).height();
+    $('section').each(function () { 
+      const position = $(this).offset().top;
+      if(scrollAmount > position - windowHeight + 200){
+        $(this).addClass('fade-in');
+      }
+    });
     headerScroll();
     pageTopScroll();
+  });
+
+  $(window).on('load resize', function() {
+    var headerHeight = $('header').outerHeight();
+    $('main').css('margin-top', headerHeight + 300 + 'px');
   });
 
   $('a[href^="#"]').click(function () { 
@@ -41,17 +54,6 @@ $(function(){
     return false;    
   });
 
-  $(window).scroll(function () { 
-    const scrollAmount = $(window).scrollTop();
-    const windowHeight = $(window).height();
-    $('section').each(function () { 
-      const position = $(this).offset().top;
-      if(scrollAmount > position - windowHeight + 100){
-        $(this).addClass('fade-in');
-      }
-    });
-  });
-
   $('#hobby-section img').click(function () { 
     const imgSrc = $(this).attr('src');
     $('.big-img').attr('src', imgSrc);    
@@ -61,6 +63,6 @@ $(function(){
 
   $('.close-btn').click(function () { 
     $('.modal').fadeOut();
-    return false;    
+    return false;
   });
 });

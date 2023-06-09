@@ -19,7 +19,7 @@ body {
   text-align: left;
 }
 
-h1 {
+h2 {
   position: relative;
   display: flex;
   padding: 0 55px;
@@ -97,7 +97,7 @@ section {
 }
 
 @media screen and (max-width: 767px) {
-  h1 {
+  h2 {
     font-style: italic;
     font-size: 40px;
     margin: 50px 0 20px 0;
