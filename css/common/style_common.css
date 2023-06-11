@@ -44,6 +44,15 @@ h2:after {
   right: 0;
 }
 
+h3 {
+  position: relative;
+  display: flex;
+  padding: 0 55px;
+  font-size: 25px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
 section {
   opacity: 0;
   transition: 1s;
@@ -83,6 +92,10 @@ section {
   text-decoration: none;
 }
 
+.icon-color {
+  color: #ffffff;
+}
+
 @media screen and (min-width: 768px) {
   section {
     margin: 20px;
@@ -101,4 +114,5 @@ section {
   section {
     margin: 0 10px;
   }
-}/*# sourceMappingURL=style_common.css.map */
+}
+/*# sourceMappingURL=style_common.css.map */

@@ -1,5 +1,5 @@
 .accordion-wrap{
-  border-bottom: 1px solid #ddba4d;
+  border-bottom: 1px solid #808080;
   &:first-of-type .accordion-text {
     display: block;
   }
@@ -36,8 +36,8 @@ transform: rotate(180deg);
   line-height: 35px;
 }
 
-.accordion-gold {
-  color: #ddba4d;
+.accordion-color {
+  color: #808080;
 }
 
 .accordion-no-bar {

@@ -47,6 +47,15 @@ h2 {
   }
 }
 
+h3 {
+  position: relative;
+  display: flex;
+  padding: 0 55px;
+  font-size: 25px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
 section {
   opacity: 0;
   transition: 1s;
@@ -84,6 +93,10 @@ section {
   color: white;
   font-size: 40px;
   text-decoration: none;
+}
+
+.icon-color {
+  color: #ffffff;
 }
 
 @media screen and (min-width: 768px) {
