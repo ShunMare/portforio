@@ -1,32 +1,37 @@
-img:not([alt]) {
-  border: 10px solid red;
-}
+@use 'responsive' as *;
 
 body {
   margin: 0;
   font-family: "Book Antiqua", "Yu Mincho";
 }
 
-.container {
-  overflow:hidden;
+h1 {
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  margin: 150px 0;
+  letter-spacing: 1px;
+  transform: translateY(-50%) translateX(-50%);
+  color:#fff;
+  text-shadow: 0 0 15px #666;
+  font-size: 45px;
+  width: 100%;
 }
-
-.wrapper {
-  max-width: 1000px;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
-}
-
+  
 h2 {
   position: relative;
   display: flex;
-  padding: 0 55px;
-  font-size: 35px;
   justify-content: center;
   margin-top: 100px;
   margin-bottom: 40px;
+  padding: 0 55px;
+  font-size: 35px;
+  @include respond(phone) {
+    font-size: 40px;
+    margin: 50px 0 20px 0;
+  }
 
   &:before, &:after {
     content: '';
@@ -37,11 +42,11 @@ h2 {
     height: 2px;
     border-top: solid 1px black;
   }
-
+  
   &:before {
     left: 0;
   }
-
+  
   &:after {
     right: 0;
   }
@@ -59,64 +64,35 @@ h3 {
 section {
   opacity: 0;
   transition: 1s;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  display: block;
+  @include respond(phone) {
+    margin: 20px 10px;
+  }
+}
+
+.wrapper {
+  max-width: 1000px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.container {
+  overflow:hidden;
 }
 
 .fade-in {
   opacity: 1;
 }
 
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: none;
-}
-
-.big-img {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 80%;
-  max-width: 800px;
-  margin: auto;
-}
-
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  color: white;
-  font-size: 40px;
-  text-decoration: none;
-}
-
 .icon-color {
   color: #ffffff;
 }
 
-@media screen and (min-width: 768px) {
-  section {
-    margin: 20px;
-    display: flex;
-    justify-content: center;
-    display: block;
-    margin: 20px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  h2 {
-    font-style: italic;
-    font-size: 40px;
-    margin: 50px 0 20px 0;
-  }
-
-  section {
-    margin: 0 10px;
-  }
+img:not([alt]) {
+  border: 10px solid red;
 }

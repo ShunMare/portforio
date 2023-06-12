@@ -1,4 +1,4 @@
-#video-area{
+.video-area{
   position: fixed;
   z-index: -1;
   top: 0;
@@ -8,7 +8,7 @@
   overflow: hidden;
 }
 
-#video {
+.video {
   position: absolute;
   z-index: -1;
   top: 50%;

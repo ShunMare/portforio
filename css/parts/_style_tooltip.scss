@@ -4,9 +4,17 @@
   padding: 0 5px;
   font-size: 0.9em;
   color: #4682b4;
+  
+  &:hover {
+    .balloon-top {
+      bottom: 100%;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
 }
 
-.balloon_top {
+.balloon-top {
   width: 150px;
   position: absolute;
   left: 50%;
@@ -23,26 +31,16 @@
   opacity: 0;
   z-index: 1;
   transition: 0.5s all;
+
+    &::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top: 12px solid #666;
+    position: absolute;
+    top: 99%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
-
-.balloon_top::before {
-  content: "";
-  width: 0;
-  height: 0;
-  border: 10px solid transparent;
-  border-top: 12px solid #666;
-  position: absolute;
-  top: 99%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.tooltip:hover .balloon_top {
-  bottom: 100%;
-  visibility: visible;
-  opacity: 1;
-}
-
-@media screen and (min-width: 768px) {}
-
-@media screen and (max-width: 767px) {}

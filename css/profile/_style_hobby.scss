@@ -1,78 +1,69 @@
+@use '../common/responsive' as *;
+
 .hobby-wrapper {
+  @include respond(phone) {
+    display: block;
+  }
+
   img {
     border-radius: 2%;
   }
-}
-@media screen and (min-width: 768px) {
-  .hobby-wrapper > div:nth-child(even) > {
+
+  > div:nth-child(even) > {
     p {
       order: 1;
     }
-
+  
     img {
       order: 2;
     }
-  }
+  }  
 
   .hobby-contents {
     display: flex;
     justify-content: center;
-    margin: 20px 30px;
-
+    margin: 20px 0px;
+    @include respond(phone) {
+      display: block;
+      justify-content: center;
+      margin: 0;
+    }
+  
     > img {
       border-radius: 2%;
       margin: 20px 10px;
       width: 40%;
+      @include respond(phone) {
+        display: block;
+        margin: 0;
+        width: 100%;
+        order: 1;
+      }  
     }
-  }
 
-  .hobby-contents-inner {
-    display: inline-block;
-    margin: 30px;
-
-    > p {
-      margin-top: 30px;
+    &-inner {
+      display: inline-block;
+      margin: 30px 0;
+      @include respond(phone) {
+        display: block;
+      }
+      
+      > p {
+        margin-top: 30px;
+        @include respond(phone) {
+          display: block;
+          margin: 10px;
+          order: 2;
+        }
+      }
     }
-  }
 
-  .hobby-contents-more-wrapper {
-    display: flex;
-    justify-content: flex-end;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .hobby-wrapper {
-    display: block;
-  }
-
-  .hobby-contents {
-    display: block;
-    justify-content: center;
-    margin: 0;
-
-    > img {
-      display: block;
-      margin: 0;
-      border-radius: 2%;
-      width: 100%;
-      order: 1;
+    &-more-wrapper {
+      display: flex;
+      justify-content: flex-end;
+      @include respond(phone) {
+        margin-bottom: 20px;
+      }
     }
-  }
-
-  .hobby-contents-inner {
-    display: block;
-
-    > p {
-      display: block;
-      margin: 10px;
-      order: 2;
-    }
-  }
-
-  .hobby-contents-more-wrapper {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 20px;
   }
 }

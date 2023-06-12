@@ -1,11 +1,12 @@
+@use 'common/style_reset';
 @use 'common/style_common';
 @use 'common/style_header';
 @use 'common/style_footer';
-@use 'profile/style_profile';
 @use 'profile/style_main';
 @use 'profile/style_about';
 @use 'profile/style_hobby';
 @use 'profile/style_works';
+@forward 'parts/style_modal';
 @forward 'parts/style_pagetop';
 @forward 'parts/style_more';
 @forward 'parts/style_gallery';
