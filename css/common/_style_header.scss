@@ -1,66 +1,51 @@
+@use '../common/responsive' as *;
+
 header {
   display: flex;
   justify-content: center;
   width: 100%;
+  padding: 20px 0;
   position: sticky;
   z-index: 1;
-  h1, p {
+  @include respond(phone) {
+    padding: 15px 0;
+  }
+
+  div {
+    display: flex;
+    justify-content: center;
+  }
+
+  p {
     position:absolute;
     top: 50%;
     left: 50%;
+    text-align: center;
+    margin: 500px 0;
     transform: translateY(-50%) translateX(-50%);
     color:#fff;
     text-shadow: 0 0 15px #666;
-  }
-  p {
-    text-align: center;
     font-size: larger;
+    @include respond(phone) {
+      padding: 0 20px;
+      width: 100%;
+    }
   }
 }
 
 .header-wrapper {
   a {
+    margin: 10px 30px;
     text-decoration: none;
     color: #fafaff;
-    &:hover {
-      opacity: 0.5;
-    }
-  }
-}
-
-@media screen and (min-width: 768px) {
-  header {
-    padding: 20px 0;
-    h1 {
-      letter-spacing: 1px;
-      margin: 150px 0;
-    }
-    p {
-      margin: 500px 0;
-    }
-  }
-  .header-wrapper {
-    a {
-      font-size: 20px;
-      margin: 10px 30px;
-    }
-  }
-}
-
-@media screen and (max-width: 767px) {
-  header {
-    padding: 15px 0;
-    h1 {
-      margin: 100px 0;
-    }
-    p {
-      margin: 550px 0;
-    }
-  }
-  .header-wrapper {
-    a {
+    font-size: 20px;
+    @include respond(phone) {
       font-size: 20px;
       margin: 20px;
+    }
+
+    &:hover {
+      opacity: 0.5;
     }
   }
 }

@@ -15,21 +15,23 @@
 <body>
   <div class="container">
   <header>
-    <div id="video-area">
-      <video id="video" poster="img/movie.jpg" webkit-playsinline playsinline muted autoplay loop>
+    <div class="video-area">
+      <video class="video" poster="img/movie.jpg" webkit-playsinline playsinline muted autoplay loop>
         <source src="videos/movie.mp4" type="video/mp4">
       </video>
     </div>
-    <h1>Shun Okubo</h1>
-    <p> I began my career as a mechanical engineer and now work as an information technology system engineer. My experience spans a wide range of fields, from quality assurance to tool modification, <br>
-      development of image processing devices, smartwatch development, and development of onboard systems. I use programming languages such as C++, Python, and VBA.<br>
-      I'm originally from Kagoshima, a beautiful city in the southern part of Japan.<br>
-      <br>
-      In my spare time, I enjoy weight training and touring tourist spots. Working out helps me refresh and gain new perspectives and ideas.<br>
-      I also love experiencing new cultures and landscapes through my travels. These hobbies have a positive impact on my work.<br>
-      <br>
-      With my past experiences and skills, I am always ready to take on new challenges
-    </p> 
+    <div>
+      <h1>Shun Okubo</h1>
+      <p> I began my career as a mechanical engineer and now work as an information technology system engineer. My experience spans a wide range of fields, from quality assurance to tool modification, <br>
+        development of image processing devices, smartwatch development, and development of onboard systems. I use programming languages such as C++, Python, and VBA.<br>
+        I'm originally from Kagoshima, a beautiful city in the southern part of Japan.<br>
+        <br>
+        In my spare time, I enjoy weight training and touring tourist spots. Working out helps me refresh and gain new perspectives and ideas.<br>
+        I also love experiencing new cultures and landscapes through my travels. These hobbies have a positive impact on my work.<br>
+        <br>
+        With my past experiences and skills, I am always ready to take on new challenges
+      </p>
+    </div>
     <nav class="header-wrapper">
       <a href="#AboutApperA">About</a>
       <a href="#HobbyApperA">Hobby</a>
@@ -47,10 +49,10 @@
       <a id="AboutApperA"></a>
       <h2 id="about-h2">About</h2>
       <section class="about-wrapper">
-        <div class="about-img-wrapper">
+        <div class="about-img">
           <img class="lazyload" data-src="images/about.jpg" alt="自分の写真">
         </div>
-        <div class="about-contents-wrapper">
+        <div class="about-content">
           <p>Shun Okubo</p>
           <div class="accordion-wrap">
             <div class="accordion-item">
@@ -107,7 +109,7 @@
           <img class="lazyload" data-src="images/hobby-2.jpg" alt="雄川の滝">
           <div class="hobby-contents-inner">
             <p>南大隅町の地にひっそりと存在するこの滝は、その巨大さと存在感により、私に深い感銘を与えました。<br>
-              一見すると、<span class="tooltip">雄川の滝<span class="balloon_top">鹿児島県南大隅町に位置する滝です</span></span>は勢いよく水が流れているような力強さを感じさせますが、実際にはその逆で、滝から落ちる水の流れは静かで、ゆったりとしています。その矛盾した風景は、滝を観る者にとても不思議な、でも魅力的な雰囲気を感じさせます。</p>
+              一見すると、<span class="tooltip">雄川の滝<span class="balloon-top">鹿児島県南大隅町に位置する滝です</span></span>は勢いよく水が流れているような力強さを感じさせますが、実際にはその逆で、滝から落ちる水の流れは静かで、ゆったりとしています。その矛盾した風景は、滝を観る者にとても不思議な、でも魅力的な雰囲気を感じさせます。</p>
             <div class="hobby-contents-more-wrapper">
               <div class="more">
                 <a href="">MORE</a>
@@ -118,7 +120,7 @@
         <div class="hobby-contents" id="img-hobby3">
           <img  class="lazyload" data-src="images/hobby-3.jpg" alt="通天閣">
           <div class="hobby-contents-inner">
-            <p>大阪のランドマークである<span class="tooltip">通天閣<span class="balloon_top">大阪市浪速区の新世界地区に位置する歴史的な観光地です</span></span>です。大学生の頃、私は大阪のキャンパスに通っていました。その時、この街の賑やかさ、活気、そして何よりも人々の暖かさに心を奪われました。<br>
+            <p>大阪のランドマークである<span class="tooltip">通天閣<span class="balloon-top">大阪市浪速区の新世界地区に位置する歴史的な観光地です</span></span>です。大学生の頃、私は大阪のキャンパスに通っていました。その時、この街の賑やかさ、活気、そして何よりも人々の暖かさに心を奪われました。<br>
               大阪はまさに遊びの宝庫で、一日中探索しても飽きることはありません。大阪を特別な場所にしているのはその風景だけではありません。そこに住む人々、そのオープンで友好的な心が、街に魅力を与えています。</p>
             <div class="hobby-contents-more-wrapper">
               <div class="more">
@@ -131,7 +133,7 @@
       <a id="WorksApperA"></a>
       <h2 id="work-h2">Work</h2>
       <section id="works-section">
-        <div class="works-contents">
+        <div class="works-contents-wrapper">
           <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1maS9tjlCZmG7EdQ_TZScc8HMMYdExEAJAQCJgHetNso&font=Default&lang=en&initial_zoom=2&height=650' width='100%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
           <h3>SKILL</h3>
           <div class="work-skills-wrapper">
@@ -140,7 +142,7 @@
                 <div class="work-skill-icon">
                   <img src='https://img.icons8.com/color/96/html-5--v1.png' alt='HTML'>
                 </div>
-                <p class="skill-title">HTML</p>
+                <p class="work-skill-title">HTML</p>
               </div>
               <div>
                 <p>
@@ -153,7 +155,7 @@
                 <div class="work-skill-icon">
                   <img src='https://img.icons8.com/color/96/css3.png' alt='CSS'>
                 </div>
-                <p class="skill-title">CSS</p>
+                <p class="work-skill-title">CSS</p>
               </div>
               <div>
                 <p>
@@ -166,7 +168,7 @@
                 <div class="work-skill-icon">
                   <img src='https://img.icons8.com/color/96/javascript--v1.png' alt='JS'>
                 </div>
-                <p class="skill-title">JavaScript</p>
+                <p class="work-skill-title">JavaScript</p>
               </div>
               <div>
                 <p>
@@ -179,7 +181,7 @@
                 <div class="work-skill-icon">
                   <img src='https://img.icons8.com/color/96/wordpress.png' alt='WordPress'>
                 </div>
-                <p class="skill-title">WordPress</p>
+                <p class="work-skill-title">WordPress</p>
               </div>
               <div>
                 <p>
@@ -192,7 +194,7 @@
                 <div class="work-skill-icon">
                   <img src='https://www.php.net/images/logos/new-php-logo.svg' alt='PHP'>
                 </div>
-                <p class="skill-title">PHP</p>
+                <p class="work-skill-title">PHP</p>
               </div>
               <div>
                 <p>
@@ -205,7 +207,7 @@
                 <div class="work-skill-icon">
                   <img src='https://img.icons8.com/color/240/python--v1.png' alt='Python'>
                 </div>
-                <p class="skill-title">Python</p>
+                <p class="work-skill-title">Python</p>
               </div>
               <div>
                 <p>
@@ -214,7 +216,7 @@
               </div>
             </div>
           </div>
-          <div class="works-contents-wrapper">
+          <div class="works-contents">
             <div class="works-contents-inner">
               <canvas id="pieChart"></canvas>
             </div>

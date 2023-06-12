@@ -1,21 +1,12 @@
+@use '../common/responsive' as *;
+
 .main-wrapper {
-  img {
-    border-radius: 2%;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .main-wrapper {
-    margin: 60px 20px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .main-wrapper {
+  margin: 60px 20px;
+  @include respond(phone) {
     margin: 40px 10px;
   }
 
-  .main-img {
+  img {
     border-radius: 2%;
   }
 }
